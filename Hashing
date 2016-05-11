@@ -1,0 +1,26 @@
+Hashing 
+
+Hash Tables:
+A hashing function is a function which assigns an int value, called a hash code,
+to each object that is an istance of some class. 
+
+There are many techniques commonly used to make hashing functions from keys, but most are based on some combination of 
+extraction, division, and folding.
+
+extraction: this method only uses a certain part of the key for the calculation of hash code.
+like using the first letter of the surname : John Lewis , Joseph Chase
+
+division: this method uses the integer remainder operator % to ensure that the hash code is within certain bounds. 
+
+folded: if a key can be broken into parts, then those parts could be folder. For instance, if the key is six digit number, 
+then it could be broken into three two digit numbers.
+
+A hash table is a data structure for a set collection where elements are stored in an array at indices 
+determined by their hash code. For instance, "cow" ,"fly", "dog" are to be stored in a hash table with 9 buckets, 
+using a hashing function which takes the first letter of the string and subtracts off 'a'.  If an element is to be added 
+has a hash code larger than the capacity of the hash table.  we need to take the remainder modulo the capacity to obtain
+a valid index. 
+
+Overall , hash table provides quite efficent access to elements in collection
+O(1) to see if the element is stored at that index, avoiding the need for a linear or binary search
+perfect hashing :  as long as the hashing is one-to-one for the elments in the collection.
